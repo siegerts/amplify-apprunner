@@ -10,6 +10,14 @@
       "StackName": "amplify-amplifyapprunner-dev-112347",
       "StackId": "arn:aws:cloudformation:us-east-1:706111362025:stack/amplify-amplifyapprunner-dev-112347/9018c810-5eb8-11ed-8748-0a933cd9249b",
       "AmplifyAppId": "d2b3n4v7k12efe"
+    },
+    "categories": {
+      "auth": {
+        "amplifyapprunnerfd741e47": {}
+      },
+      "storage": {
+        "amplifyapprunner": {}
+      }
     }
   }
 }

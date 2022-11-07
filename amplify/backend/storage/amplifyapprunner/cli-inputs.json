@@ -1,0 +1,14 @@
+{
+  "resourceName": "amplifyapprunner",
+  "policyUUID": "2a1c8cb2",
+  "bucketName": "amplifyappruner",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
