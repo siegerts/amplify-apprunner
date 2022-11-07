@@ -26,31 +26,17 @@ Storage.configure({ level: "private" });
 
 export default function Profile() {
   const { user } = useAuthenticator((context) => [context.route]);
+  const [message, setMessage] = useState();
   const [file, setFile] = useState();
   const [files, setFiles] = useState([]);
   const [waitingForFiles, setWaitingForFiles] = useState(true);
 
-  //   useEffect(() => {
-  //     if (
-  //       authStatus &&
-  //       authStatus !== "authenticated" &&
-  //       authStatus !== "configuring"
-  //     ) {
-  //       console.log("not authenticated");
-  //     }
-  //   }, [authStatus]);
-
   useEffect(() => {
     updateFiles();
 
-    const payload = {
-      body: { key: "banner.jpeg" },
-      headers: {},
-    };
-
-    API.post("apiDataParsing", "/data", payload)
+    API.get("apprunner-api", "/")
       .then((response) => {
-        console.log("API RESP", response);
+        setMessage(response.message);
       })
       .catch((error) => {
         console.log(error.response);
@@ -123,7 +109,8 @@ export default function Profile() {
               marginTop={"2rem"}
             >
               <Flex justifyContent={"space-between"} alignItems={"center"}>
-                <Text> Unlock additional features like x, y, and z.</Text>
+                {/* from AppRunner API */}
+                <Text>{message}</Text>
 
                 <Button
                   marginLeft={"2rem"}
