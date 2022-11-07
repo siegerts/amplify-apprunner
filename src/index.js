@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 
-import { Amplify } from "aws-amplify";
+import { Amplify, Auth } from "aws-amplify";
 import awsExports from "./aws-exports";
 
 Amplify.configure({
@@ -12,7 +12,14 @@ Amplify.configure({
       endpoints: [
         {
           name: "apprunner-api",
-          endpoint: "<placeholder>",
+          endpoint: process.env.APPRUNNER_API || "http://localhost:3000",
+          custom_header: async () => {
+            return {
+              Authorization: `${(await Auth.currentSession())
+                .getAccessToken()
+                .getJwtToken()}`,
+            };
+          },
         },
       ],
     },
