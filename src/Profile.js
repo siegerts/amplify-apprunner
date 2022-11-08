@@ -82,6 +82,7 @@ export default function Profile() {
       await Storage.put(`data/${file.name}`, file, {
         level: "private",
       });
+      setFile(null);
       event.target.reset();
     } catch (err) {
       alert(err);
