@@ -12,7 +12,8 @@ Amplify.configure({
       endpoints: [
         {
           name: "apprunner-api",
-          endpoint: process.env.APPRUNNER_API || "http://localhost:3000",
+          endpoint:
+            process.env.REACT_APP_APPRUNNER_API || "http://localhost:3000",
           custom_header: async () => {
             return {
               Authorization: `${(await Auth.currentSession())

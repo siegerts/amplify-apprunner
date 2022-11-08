@@ -28,7 +28,7 @@ const message =
 app.get("/", async (req, res, next) => {
   try {
     // A valid JWT is expected in the HTTP header "authorization"
-    console.log(req.headers);
+    // console.log(req.headers);
     await jwtVerifier.verify(req.header("authorization"));
   } catch (err) {
     console.error(err);
