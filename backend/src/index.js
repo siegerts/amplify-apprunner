@@ -23,7 +23,7 @@ const jwtVerifier = CognitoJwtVerifier.create({
 });
 
 const message =
-  "Unlock additional features with Amplify + AppRunner like x, y, and z.";
+  "Unlock additional features with Amplify + App Runner like x, y, and z.";
 
 app.get("/", async (req, res, next) => {
   try {
