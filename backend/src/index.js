@@ -19,7 +19,6 @@ const jwtVerifier = CognitoJwtVerifier.create({
   userPoolId: process.env.COGNITO_USERPOOL_ID,
   tokenUse: "access",
   clientId: process.env.COGNITO_CLIENT_ID,
-  scope: "aws.cognito.signin.user.admin",
 });
 
 const message =
