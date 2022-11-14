@@ -1,7 +1,7 @@
 {
   "resourceName": "amplifyapprunner",
-  "policyUUID": "d06e1e97",
-  "bucketName": "amplifyapprunner",
+  "policyUUID": "2a1c8cb2",
+  "bucketName": "amplifyappruner",
   "storageAccess": "auth",
   "guestAccess": [],
   "authAccess": [
