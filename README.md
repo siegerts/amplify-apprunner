@@ -6,8 +6,8 @@ React frontend (with Amplify Auth & Storage) hosted on AWS Amplify that calls an
 
 Both projects live in the same repo:
 
-- The Amplify app is deployed via continuous CI/CD with GitHub on Amplify Hosting
-- The App Runner service is deployed via AWS Copilot + Docker.
+- The Amplify app is deployed via continuous CI/CD with GitHub on [Amplify Hosting](https://aws.amazon.com/amplify/hosting/)
+- The App Runner service is deployed via [AWS Copilot + Docker](https://github.com/aws/copilot-cli).
 
 The [user's JWT from Amplify Auth](https://github.com/siegerts/amplify-apprunner/blob/main/src/index.js#L17) is passed with the API request and verified in the service using [aws-jwt-verify](https://github.com/awslabs/aws-jwt-verify).
 
