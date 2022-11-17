@@ -1,6 +1,6 @@
 # amplify-apprunner
 
-React frontend (with Amplify Auth & Storage) hosted on AWS Amplify that calls an Express API running on AWS App Runner. The user's JWT from Amplify Auth is passed with the API request and verified in the service using https://github.com/awslabs/aws-jwt-verify. The API service returns a simple "promo" message for the UI.
+React frontend (with Amplify Auth & Storage) hosted on AWS Amplify that calls an Express API running on AWS App Runner.
 
 ![](https://github.com/siegerts/amplify-apprunner/blob/main/amplify-ui-screenshot.png)
 
