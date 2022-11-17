@@ -1,6 +1,6 @@
 # amplify-apprunner
 
-React Frontend (with Amplify Auth & Storage) that calls an Express API running on App Runner. The user's JWT from Amplify Auth is passed with the API request and verified in the service using https://github.com/awslabs/aws-jwt-verify. The API service returns a simple "promo" message for the UI.
+React frontend (with Amplify Auth & Storage) hosted on AWS Amplify that calls an Express API running on AWS App Runner. The user's JWT from Amplify Auth is passed with the API request and verified in the service using https://github.com/awslabs/aws-jwt-verify. The API service returns a simple "promo" message for the UI.
 
 ![](https://github.com/siegerts/amplify-apprunner/blob/main/amplify-ui-screenshot.png)
 
@@ -9,7 +9,7 @@ Both projects live in the same repo:
 - The Amplify app is deployed via continuous CI/CD with GitHub on Amplify Hosting
 - The App Runner service is deployed via AWS Copilot + Docker.
 
-The [user's JWT from Amplify Auth](https://github.com/siegerts/amplify-apprunner/blob/main/src/index.js#L17) is passed with the API request and verified in the service using https://github.com/awslabs/aws-jwt-verify.
+The [user's JWT from Amplify Auth](https://github.com/siegerts/amplify-apprunner/blob/main/src/index.js#L17) is passed with the API request and verified in the service using [aws-jwt-verify](https://github.com/awslabs/aws-jwt-verify).
 
 ```js
 Amplify.configure({
@@ -70,3 +70,5 @@ cd backend
 
 copilot deploy
 ```
+
+Once deployed, the service will be visible in the App Runner console.
